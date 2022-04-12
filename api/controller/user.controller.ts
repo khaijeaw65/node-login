@@ -8,6 +8,7 @@ const userExists = async (username: string) => {
     const sql = `Select username from users Where username = '${username}'`;
 
     try {
+        console.log('gg');
         const result: boolean = await new Promise((resolve, reject) => {
             pool.query(sql, (error: MysqlError, results: any, fields: FieldInfo[]) => {
                 if (error) {
